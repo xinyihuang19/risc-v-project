@@ -1,0 +1,2 @@
+/Users/huangxinyi/Desktop/risc-v/risc-v-project/phase1/rtl/regs.v:33: warning: @* is sensitive to all 32 words in array 'regs'.
+/Users/huangxinyi/Desktop/risc-v/risc-v-project/phase1/rtl/regs.v:43: warning: @* is sensitive to all 32 words in array 'regs'.

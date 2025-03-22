@@ -1,0 +1,1 @@
+/Users/huangxinyi/Desktop/risc-v/risc-v-project/phase1/rtl/rom.v:52: warning: @* is sensitive to all 12 words in array 'rom_mem'.

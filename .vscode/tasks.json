@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile RISC-V",
+      "type": "shell",
+      "command": "iverilog",
+      "args": [
+        "-I",
+        "${workspaceFolder}/phase1",
+        "-g2012",
+        "-Wall",
+        "-o",
+        "sim_out",
+        "${workspaceFolder}/phase1/top.v",
+        "${workspaceFolder}/phase1/tb/tb.v"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
