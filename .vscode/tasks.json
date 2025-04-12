@@ -7,13 +7,39 @@
       "command": "iverilog",
       "args": [
         "-I",
-        "${workspaceFolder}/phase1",
+        "${workspaceFolder}/phase2",
         "-g2012",
         "-Wall",
         "-o",
         "sim_out",
-        "${workspaceFolder}/phase1/top.v",
-        "${workspaceFolder}/phase1/tb/tb.v"
+        "${workspaceFolder}/phase2/top.v",
+        "${workspaceFolder}/phase2/tb/tb.v"
+      ],
+      "group": {
+        "kind": "build"
+      },
+      "problemMatcher": []
+    },
+    
+    {
+      "label": "Run RISC-V Simulation",
+      "type": "shell",
+      "command": "vvp",
+      "args": [
+        "sim_out"
+      ],
+      "group": {
+        "kind": "test"
+      },
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Compile and Run RISC-V",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Compile RISC-V",
+        "Run RISC-V Simulation"
       ],
       "group": {
         "kind": "build",
