@@ -27,8 +27,9 @@ module tb();
 
     // rom 初始值
     initial begin
+
         // 因为官方文件是16进制的，要把reademb改为readmemh
-        $readmemh("phase2/tb/inst_txt/rv32ui-p-addi.txt", tb.open_risc_v_soc_inst.rom_inst.rom_mem);
+        $readmemh("phase2/tb/inst_txt/rv32ui-p-xor.txt", tb.open_risc_v_soc_inst.rom_inst.rom_mem);
     end
 
     initial begin
