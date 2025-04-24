@@ -1,0 +1,41 @@
+{
+ "version": "2.0.0",
+ "tasks": [
+  {
+   "label": "Compile and Run RISC-V",
+   "type": "shell",
+   "command": "iverilog -I ${workspaceFolder}/phase2 -g2012 -Wall -o sim_out ${workspaceFolder}/phase2/top.v ${workspaceFolder}/phase2/tb/tb.v && vvp sim_out",
+   "group": {
+    "kind": "build",
+    "isDefault": true
+   },
+   "problemMatcher": []
+  }
+ ]
+}
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile RISC-V",
+      "type": "shell",
+      "command": "iverilog",
+      "args": [
+        "-I",
+        "${workspaceFolder}/phase2",
+        "-g2012",
+        "-Wall",
+        "-o",
+        "sim_out",
+        "${workspaceFolder}/phase2/top.v",
+        "${workspaceFolder}/phase2/tb/tb.v"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
